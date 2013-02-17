@@ -6,6 +6,9 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
+group :production do
+  gem 'pg'
+end
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19', :require => 'ruby-debug'
@@ -16,9 +19,6 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'simplecov'
-end
-group :production do
-  gem 'pg'
 end
 
 # Gems used only for assets and not required
