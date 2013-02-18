@@ -18,6 +18,8 @@ module NavigationHelpers
     when /^the edit page for "(.*)"$/ then edit_movie_path(Movie.find_by_title($1))
     when /^the details page for "(.*)"$/ then movie_path(Movie.find_by_title($1))
     when /^Similar Movies$/ then '/movies/list_movies_by_director'
+    when /^the Similar Movies page for "Star Wars"$/ then '/movies/list_movies_by_director'
+    when /^the Create New Movie page$/ then '/movies/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

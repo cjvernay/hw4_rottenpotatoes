@@ -2,6 +2,7 @@ class MoviesController < ApplicationController
 
   def list_movies_by_director
     if params[:director].length == 0
+      flash[:notice] = "'#{params[:title]}' has no director info"
       redirect_to :action => "index"
     end
 

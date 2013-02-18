@@ -50,7 +50,7 @@ Then /the director of "(.*)" should be "(.*)"/ do | title, director|
   Movie.where("title = ? AND director = ?", title, director).length > 0
 end
 
-Then /^I will be on the (.*) page for "(.*)"$/ do |page_name, title|
+Then /^I will  be on the (.*) page for "(.*)"$/ do |page_name, title|
   steps %Q{Then I should be on #{page_name}
            Then I should see "#{title}"}
 end
